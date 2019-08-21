@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 600px;
+            height: 320px;
+        }
+        .square {
+            width: 200px;
+            height: 50%;
+            border: 1px solid gray;
+        }
+        .character {
+            display: none;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div class="base square alina_">
+                <p>Алина</p>
+            </div>
+            <div class="square character alina">
+                <p>Умница</p>
+            </div>
+        </div>
+        <div>
+            <div class="base square dima_">
+                <p>Дима</p>
+            </div>
+            <div class="square character dima">
+                <p>Хохмач</p>
+            </div>
+        </div>
+        <div>
+            <div class="base square serg_">
+                <p>Сергей</p>
+            </div>
+            <div class="square character serg">
+                <p>Тихоня</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('document').ready(()=>{
+            let a = 0;
+            let d = 0;
+            let s = 0;
+            $('.alina_').on("click",()=> {
+                if(a == 0) {
+                   $('.alina').show();
+                   a ++; 
+                }
+                else {
+                    $('.alina').hide();
+                    a = 0;
+                } 
+            });
+            $('.dima_').on("click",()=>{
+                if(d == 0) {
+                    $('.dima').show();
+                    d ++;
+                }
+                else {
+                    $('.dima').hide();
+                    d = 0;
+                }
+            });
+            $('.serg_').on("click",()=>{
+                if(s == 0) {
+                    $('.serg').show();
+                    s ++;
+                }
+                else {
+                    $('.serg').hide();
+                    s = 0;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
